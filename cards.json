@@ -1,0 +1,86 @@
+{
+    "slides": [
+      {
+        "img": "img/slide1.jpg",
+        "altimg": "slide1"
+      },
+      {
+        "img": "img/slide2.jpg",
+        "altimg": "slide2"
+      },
+      {
+        "img": "img/slide1.jpg",
+        "altimg": "slide1"
+      },
+      {
+        "img": "img/slide1.jpg",
+        "altimg": "slide1"
+      },
+      {
+        "img": "img/slide1.jpg",
+        "altimg": "slide1"
+      }
+    ],
+    "cards": [
+      {
+        "src": "img/gallery/card1.webp",
+        "alt": "card1",
+        "address": "1450 Cloudcroft Drop",
+        "city": "Illinois / Chicago",
+        "price": "$250,000",
+        "area": "3400 Sq Ft",
+        "bedrooms": "2",
+        "bathrooms": "1"
+      },
+      {
+        "src": "img/gallery/card2.webp",
+        "alt": "card2",
+        "address": "140 Small Village",
+        "city": "Missouri / Kansas City",
+        "price": "$200,000",
+        "area": "3400 Sq Ft",
+        "bedrooms": "2",
+        "bathrooms": "1"
+      },
+      {
+        "src": "img/gallery/card3.webp",
+        "alt": "card3",
+        "address": "1250 Lake House",
+        "city": "Colorado / Denver",
+        "price": "$339,000",
+        "area": "3400 Sq Ft",
+        "bedrooms": "2",
+        "bathrooms": "1"
+      },
+      {
+        "src": "img/gallery/card4.webp",
+        "alt": "card4",
+        "address": "1450 Cloudcroft Drop",
+        "city": "Illinois / Chicago",
+        "price": "$250,000",
+        "area": "3400 Sq Ft",
+        "bedrooms": "2",
+        "bathrooms": "1"
+      },
+      {
+        "src": "img/gallery/card5.webp",
+        "alt": "card5",
+        "address": "140 Small Village",
+        "city": "Missouri / Kansas City",
+        "price": "$200,000",
+        "area": "3400 Sq Ft",
+        "bedrooms": "2",
+        "bathrooms": "1"
+      },
+      {
+        "src": "img/gallery/card6.webp",
+        "alt": "card6",
+        "address": "1250 Lake House",
+        "city": "Colorado / Denver",
+        "price": "$339,000",
+        "area": "3400 Sq Ft",
+        "bedrooms": "2",
+        "bathrooms": "1"
+      }
+    ]
+}
