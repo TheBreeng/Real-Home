@@ -48,7 +48,7 @@ function cards(parentSelector, cardsStyle) {
         }
     }
 
-    getResource('db.json/cards')
+    getResource('https://thebreeng.github.io/Real-Home/db.json/cards')
         .then(data => {
             data.forEach(({
                 src,
