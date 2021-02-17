@@ -48,7 +48,7 @@ function cards(parentSelector, cardsStyle) {
         }
     }
 
-    getResource('json/index.json/cards')
+    getResource('https://my-json-server.typicode.com/TheBreeng/Real-Home/cards')
         .then(data => {
             data.forEach(({
                 src,
