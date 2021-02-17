@@ -48,7 +48,7 @@ function cards(parentSelector, cardsStyle) {
         }
     }
 
-    getResource('db.json/cards')
+    getResource('json/index.json/cards')
         .then(data => {
             data.forEach(({
                 src,
