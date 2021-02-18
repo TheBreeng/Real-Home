@@ -1,5 +1,6 @@
 @import "../../fonts/texgyreheros/_texgyreheros.css";
 @import "_reset"; //Сброс стилей
+@import "_burger";
 
 //Базовые стили
 $btn_color: #e2574c;
@@ -58,9 +59,6 @@ $bg_color: #f9f9f9;
     }
 }
 
-body {
-    min-width: 1280px;
-}
 
 p, a {
     @include playfairDisplay(400, 16px);
@@ -131,7 +129,6 @@ header, section, .button, ul, li, .logo, .card,
 }
 
 .social {
-    margin-right: 130px;
     li {
         border: 3px solid $nav_color;
         border-radius: 50%;
@@ -153,7 +150,6 @@ header, section, .button, ul, li, .logo, .card,
     width: 180px;
     height: 45px;
     position: relative;
-    margin-left: 130px;
     span {
         font-weight: 700; 
     }
@@ -198,6 +194,10 @@ header, section, .button, ul, li, .logo, .card,
 header {
     justify-content: space-between;
     height: 90px;
+    padding: {
+        left: 130px;
+        right: 130px;
+    };
     background-color: white;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     a {
@@ -211,6 +211,26 @@ header {
         &:hover {
             background-color: $nav_color;
             cursor: pointer;
+        }
+    }
+
+    .burger {
+        display: none;
+    }
+
+    @media (max-width: 1450px) {
+        padding: {
+            left: 40px;
+            right: 40px;
+        };
+    }
+
+    @media (max-width: 1270px) {
+        .menu, .social {
+            display: none;
+        }
+        .burger {
+            display: block;
         }
     }
 }
@@ -405,9 +425,10 @@ header {
 
     &__contacts {
         display: flex;
-        img, p {
+        img, p, a {
             margin-right: 12px;
             font-weight: 700;
+            z-index: 15;
         }
         img {
             width: 14px;
@@ -416,7 +437,7 @@ header {
         img:last-of-type {
             margin-left: 30px;
         }
-        p:last-of-type {
+        a {
             text-decoration: underline;
             color: $btn_color;
         }
@@ -554,7 +575,7 @@ footer {
     background-color: $h_color;
     justify-content: space-evenly;
 
-    a {
+    a:not(.mail) {
         color: white;
         transition: 0.5s;
         &:hover {
@@ -615,7 +636,7 @@ footer {
         li:nth-of-type(5) {
             margin-bottom: 5px;
         }
-        li:last-of-type {
+        a {
             margin-top: 10px;
             color:  $btn_color;
             text-decoration: underline;
