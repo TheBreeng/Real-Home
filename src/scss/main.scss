@@ -1,0 +1,235 @@
+@import "./components/_mixins";
+@import "./components/_colors";
+
+
+header, section, ul, li, .logo, .card, .menu-mobile, footer {
+    @include flex;
+}
+
+p, a {
+    @include playfairDisplay(400, 16px);
+    text-decoration: none;
+}
+
+h2 {
+    @include raleway__font(500, 45px);
+    span {
+        font-weight: 300;
+    }
+}
+h3 {
+    @include raleway__font(500, 20px);
+}
+
+.container {
+    padding: 0 135px 0 135px;
+}
+
+.line {
+    width: 110px;
+    border: {
+        bottom: 3px solid $btn_color;
+        radius: 10%;
+    }
+    margin: {
+        top: 40px;
+        bottom: 40px;
+    }
+}
+
+.social {
+    li {
+        justify-content: center;
+        border: 3px solid $nav_color;
+        border-radius: 50%;
+        height: 33px;
+        width: 33px;
+        transition: 0.5s;
+    }
+    li:hover {
+        transform: scale(1.2);
+        transition: 0.5s;
+    }
+    a:not(:first-child) {
+        margin-left: 15px;
+    }
+}
+
+.logo {
+    @include raleway__font(300, 30px);
+    justify-content: center;
+    width: 180px;
+    height: 45px;
+    position: relative;
+    span {
+        font-weight: 700; 
+    }
+    // Оборачивает лого уголками
+    &::before,
+    &::after,
+    div::before,
+    div::after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border: {
+            color: $h_color;
+            style: solid; 
+        }
+    }
+    &::after {
+        left: 0;
+        top: 0;
+        border-width: 3px 0 0 3px;
+    }
+    &::before {
+        left: 0;
+        bottom: 0;
+        border-width: 0 0 3px 3px;
+    }
+    div::after {
+        right: 0;
+        top: 0;
+        border-width: 3px 3px 0 0;
+    }
+    div::before {
+        right: 0;
+        bottom: 0;
+        border-width: 0 3px 3px 0;
+    }
+}
+
+
+header {
+    position: relative;
+    justify-content: space-between;
+    height: 90px;
+    background-color: $white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    a {
+        color: $h_color;
+        font-size: 20px;
+    }
+
+    .menu li {
+        height: 90px;
+        padding: 0 30px 5px;
+        &:hover {
+            background-color: $nav_color;
+            cursor: pointer;
+        }
+    }
+    .menu-mobile {
+        z-index: 16;
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        width: 90%;
+        height: 70vh;
+        background-color: $p_color;
+        border-radius: 5px;
+        a {
+            color: $white;
+            font-size: 2.3em;
+        }
+        
+    }
+
+    .burger {
+        display: none;
+        z-index: 20;
+    }
+
+    @media (max-width: 1450px) {
+        padding: {
+            left: 40px;
+            right: 40px;
+        };
+    }
+
+    @media (max-width: 1270px) {
+        .menu, .social {
+            display: none;
+        }
+        .burger {
+            display: flex;
+        }
+    }
+}
+
+
+footer {
+    height: 400px;
+    background-color: $h_color;
+
+    a:not(.mail) {
+        color: white;
+        transition: 0.5s;
+        &:hover {
+            transform: scale(1.2);
+            transition: 0.5s;
+        }
+    }
+    
+    h3 {
+        color: $white;
+    }
+    > div {
+        height: 220px;
+    }
+
+    ul:not(.social) {
+        @include playfairDisplay(400, 16px);
+        color: white;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: 220px;
+    }
+
+    li:not(:first-of-type) {
+        margin-bottom: 15px;
+    }
+    li:first-of-type {
+        margin-bottom: 30px;
+    }
+
+    .logo {
+        color: $p_color;
+        margin-left: 0;
+        &::before,
+        &::after,
+        div::before,
+        div::after {
+            border-color: $p_color;      
+        }
+    }
+
+    .social {
+        margin-right: 0;
+        margin-top: 30px;
+        li {
+            background-color: $nav_color;
+        }
+    }
+
+    .menu li a {
+        color: $white;
+    }
+
+    .contact-us {
+        li:nth-of-type(3),
+        li:nth-of-type(4),
+        li:nth-of-type(5) {
+            margin-bottom: 5px;
+        }
+        a {
+            margin-top: 10px;
+            color:  $btn_color;
+            text-decoration: underline;
+        }
+    }
+}

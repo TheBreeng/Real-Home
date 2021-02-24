@@ -1,0 +1,19 @@
+.button {
+    font: {
+        family: 'Raleway', sans-serif;
+        weight: 700;
+        size: 16px;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 180px;
+    background-color: #e2574c;
+    border-radius: 5px;
+    color: white;
+    &:hover {
+        cursor: pointer;
+        filter: brightness(1.1);
+    }
+}

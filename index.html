@@ -23,7 +23,8 @@
     <meta name='twitter:image' content=''>
     
     <title>Real Home</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@300;400;500;700&display=swap"
@@ -31,13 +32,20 @@
 </head>
 
 <body>
-    <header>
+    <header class="container">
         <a href="#">
             <div class="logo">
                 <div>REAL<span>HOME</div></span>
             </div>
         </a>
         <ul class="menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Property</a></li>
+            <li><a href="">Our Blog</a></li>
+            <li><a href="">Contacts</a></li>
+        </ul>
+        <ul class="menu-mobile" style="display: none;">
             <li><a href="">Home</a></li>
             <li><a href="">About Us</a></li>
             <li><a href="">Property</a></li>
@@ -61,7 +69,7 @@
 
         <div class="burger">
             <input type="checkbox" id="checkbox3" class="checkbox3 visuallyHidden">
-            <label for="checkbox3">
+            <label for="checkbox3" class="burger-label">
                 <div class="hamburger hamburger3">
                     <span class="bar bar1"></span>
                     <span class="bar bar2"></span>
@@ -99,7 +107,7 @@
         </div>
     </section>
 
-    <section class="description">
+    <section class="container description">
         <div>
             <h2>We are Offering the Best Estate Deals</h2>
             <p>__</p>
@@ -111,7 +119,7 @@
             consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.</p>
     </section>
 
-    <section class="features">
+    <section class="container features">
         <div>
             <img src="img/icons/earth.svg" alt="earth">
             <h3>Whole World</h3>
@@ -142,7 +150,7 @@
         </div>
     </section>
 
-    <section class="gallery">
+    <section class="container gallery">
         <h2><span>Featured</span> Properties</h2>
         <div class="line"></div>
         <p>Quisque diam lorem interdum vitaapibus vitae pede. Donec eget tellus non erat lacinia fertum. Donec in velit
@@ -152,7 +160,7 @@
     </section>
 
 
-    <section class="our-agents">
+    <section class="container our-agents">
         <div class="container-indicators">
             <div>
                 <h2><span>Our</span> Agents</h2>
@@ -224,7 +232,7 @@
         </div>
     </section>
 
-    <section class="get-started">
+    <section class="container get-started">
         <h2><span>Get Started on Buying Your</span> New Home</h2>
         <div class="button">MORE ABOUT US</div>
     </section>
@@ -266,7 +274,7 @@
         <div class="testimonials__next"></div>
     </section>
 
-    <section class="clients">
+    <section class="container clients">
         <h2><span>Our</span> Partners</h2>
         <a href="">
             <img src="img/clients/techstart.webp" alt="techstart">
@@ -283,7 +291,7 @@
         
     </section>
 
-    <footer>
+    <footer class="container">
         <div>
             <a href="">
                 <div class="logo"><div>REAL<span>HOME</div></span></div>

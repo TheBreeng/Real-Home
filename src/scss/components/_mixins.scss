@@ -1,0 +1,64 @@
+// fonts
+@import "../../../fonts/texgyreheros/_texgyreheros.css";
+
+@mixin raleway__font($weight, $size) {
+    font: {
+        family: 'Raleway', sans-serif;
+        weight: $weight;
+        size: $size;
+    }
+    color: $h_color;
+}
+@mixin texGyreHeros($weight, $size) {
+    font: {
+        family: 'TeX Gyre Heros';
+        weight: $weight;
+        size: $size;
+    }
+    color: $p_color;
+}
+@mixin playfairDisplay($weight, $size) {
+    font: {
+        family: 'Playfair Display', serif;
+        weight: $weight;
+        size: $size;
+    }
+    color: $p_color;
+}
+
+
+// flex
+
+@mixin flex($jc: space-between, $ai: center) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+
+// slider
+
+@mixin slider() {
+    position: relative;
+    width: 100%;
+
+    &__wrapper {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__inner {
+        display: flex;
+        transition: 0.5s all;
+    }
+
+    &__slide {
+        width: 100%;
+        height: 90vh;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

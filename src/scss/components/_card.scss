@@ -1,0 +1,50 @@
+// Стили для карточек генерируемых скриптом. Данные подтягиваются из db.json
+
+.card {
+    @include texGyreHeros(bold, 16px);
+    flex-direction: column;
+    justify-content: space-between;
+    height: 430px;
+    width: 365px;
+    background-color: white;
+    border: 2px solid #e6e6e6;
+    border-radius: 5px;
+    margin: {
+        top: 40px;
+        right: 40px;
+    }
+
+    img {
+        margin-bottom: 10px;
+    }
+
+    p:last-of-type {
+        font: inherit;
+        color: $btn_color;
+    }
+
+    ul {
+        font-size: 13px;
+        height: 42px;
+        width: 100%;
+        margin-top: 10px;
+        padding-left: 0;
+        border-top: 2px solid #e6e6e6;
+        justify-content: space-evenly;
+    }
+
+    li:first-child {
+        margin-left: 45px;
+    }
+    li:last-child {
+        margin-right: 45px;
+    }
+}
+
+// @media (max-width: 1270px) {
+//     .cards__wrapper:nth-child(4),
+//     .cards__wrapper:nth-child(5)
+//     .cards__wrapper:nth-child(6) {
+//         display: none;
+//     }
+// }

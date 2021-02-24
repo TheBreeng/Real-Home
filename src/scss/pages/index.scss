@@ -1,0 +1,317 @@
+@import "../components/_reset";
+@import "../components/_burger";
+@import "../components/_button";
+@import "../components/_dot";
+@import "../components/_mixins";
+@import "../components/_colors";
+@import "../components/_card";
+
+
+.main-slider__text, .main-slider__indicators, .features, .our-agents__indicators, .testimonials, .testimonials__indicators,
+.main-slider__price, .cards__wrapper, .our-agents__slide
+ {
+    @include flex(center);
+}
+
+
+.main-slider {
+    @include slider;
+
+    &__text {
+        flex-direction: column;
+        justify-content: flex-end;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        color: $white;
+        margin-bottom: 50px;
+        p {
+            @include raleway__font(700, 48px);
+            color: white;
+            margin: {
+                top: 65px;
+                bottom: 36px;
+            }
+        }
+    }
+
+    &__price {
+        @include texGyreHeros(normal, 16px);
+        margin-bottom: 100px;
+        span {
+            font-size: 36px;
+            color: $white;
+        }
+        div {
+            font: inherit;
+        }
+    }
+
+    &__text .button {
+        width: 115px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.15);
+        margin-left: 40px;
+        &:hover {
+            box-shadow: 0 0 0 2px $nav_color;
+        }
+    }
+}
+
+
+
+.description {
+    height: 367px;
+    justify-content: center;
+    div {
+        text-align: right;
+        margin-right: 50px;
+        width: 350px;
+        p {
+            font: {
+                size: 37px;
+                weight: 400;
+            }
+            letter-spacing: -6px;
+        }
+    }
+    h2 {
+        font-size: 37px;
+        line-height: 50px;
+    }
+    .text {
+        width: 740px;
+        line-height: 25px;
+    }
+}
+
+
+.features {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: center;
+    min-height: 380px;
+    background: linear-gradient(to bottom, $bg_color, $white);
+
+    div {
+        width: 15%;
+    }
+    h3 {
+        margin: {
+            top: 26px;
+            bottom: 22px;
+        }
+    }
+
+    @media (max-width: 1270px) {
+        div {
+            width: 50%;
+        }
+    }
+}
+
+
+.gallery {
+    flex-direction: column;
+    background-color: $bg_color;
+    padding-top: 60px;
+
+    p:only-of-type {
+        width: 560px;
+        text-align: center;
+    }
+
+    .cards__wrapper {
+        flex-wrap: wrap;
+        width: 75%;
+    }
+
+    .button {
+        margin: {
+            top: 50px;
+            bottom: 100px;
+        }
+    }
+}
+
+
+
+.our-agents {
+    @include slider;
+
+    &__slide {
+        width: 100%;
+        height: 545px;
+        > img {
+            width: 364px;
+            height: inherit;
+        }
+    }
+
+    &__descr {
+        width: 750px;
+        margin-left: 150px;
+
+        .name {
+            @include playfairDisplay(700, 25px);
+            margin-top: 100px;
+            color: $h_color;
+        }
+
+        .name + p {
+            line-height: 27px;
+            margin: {
+                top: 34px;
+                bottom: 34px;
+            }
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        img, p, a {
+            margin-right: 12px;
+            font-weight: 700;
+            z-index: 15;
+        }
+        img {
+            width: 14px;
+            height: 14px;
+        }
+        img:last-of-type {
+            margin-left: 30px;
+        }
+        a {
+            text-decoration: underline;
+            color: $btn_color;
+        }
+    }
+
+    .container-indicators {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding-top: 80px;
+        > div {
+            margin-left: 130px;
+        }
+    }
+
+    &__indicators {
+        align-self: flex-start;
+        margin: {
+            top: 17px;
+            left: 20px;
+        }
+    }
+
+    .dot {
+        border-color: $btn_color;
+        &__active {
+            background-color: $btn_color;
+        }
+    }
+}
+
+.get-started {
+    justify-content: space-evenly;
+    background: $bg_color;
+    height: 140px;
+}
+
+.testimonials {
+    @include slider;
+
+    h2, .line, &__indicators, &__text {
+        position: absolute;
+    }
+    &__slide {
+        position: relative;
+        height: 65vh;
+    }
+
+    &__text {
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        p {
+            @include raleway__font(400, 24px);
+            width: 700px;
+            height: 100px;
+            color: $white;
+            line-height: 35px;
+            text-align: center;
+        }
+        p + p {
+            @include playfairDisplay(400, 20px);
+            margin-top: 32px;
+            color: $white;
+        }
+        span {
+            font-weight: 700;
+        }
+    }
+
+    &__indicators {
+        align-self: flex-end;
+        margin-bottom: 110px;
+    }
+
+    &__prev {
+        z-index: 15;
+        position: absolute;
+        left: 125px;
+        transform: rotate(-45deg);
+        height: 35px;
+        width: 35px;
+        border: {
+            top: 3px solid;
+            left: 3px solid;
+            color: $white;
+        }
+    }
+    &__prev:hover, &__next:hover  {
+        cursor: pointer;
+        border: {
+            top: 10px solid;
+            left: 10px solid;
+            color: $white;
+        }
+    }
+    &__next {
+        @extend .testimonials__prev;
+        left: auto;
+        right: 125px;
+        transform: rotate(135deg);
+    }
+}
+
+.clients {
+    justify-content: space-around;
+    height: 270px;
+    padding: {
+        left: 125px;
+        right: 125px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    img {
+        transition: 0.5s;
+    }
+    img:hover {
+        transform: scale(1.2);
+        transition: 0.5s;
+    }
+}
