@@ -23,6 +23,9 @@ h3 {
 
 .container {
     padding: 0 135px 0 135px;
+    @media (max-width: 1450px) {
+        padding: 0 40px 0 40px;
+    }
 }
 
 .line {
@@ -126,7 +129,7 @@ header {
         justify-content: space-evenly;
         position: absolute;
         top: 5px;
-        right: 10px;
+        right: 5px;
         width: 90%;
         height: 70vh;
         background-color: $p_color;
@@ -162,7 +165,13 @@ header {
 
 
 footer {
-    height: 400px;
+    @media (max-width: 1060px) {
+        min-height: 50px;
+        & > * {
+            display: none;
+        }
+    }
+    min-height: 385px;
     background-color: $h_color;
 
     a:not(.mail) {

@@ -2,6 +2,12 @@
 
 .card {
     @include texGyreHeros(bold, 16px);
+    @media (max-width: 1270px) {
+        margin-right: 0;
+        &:nth-last-child(-n+3) {
+            display: none;
+        }
+    }
     flex-direction: column;
     justify-content: space-between;
     height: 430px;
@@ -40,11 +46,3 @@
         margin-right: 45px;
     }
 }
-
-// @media (max-width: 1270px) {
-//     .cards__wrapper:nth-child(4),
-//     .cards__wrapper:nth-child(5)
-//     .cards__wrapper:nth-child(6) {
-//         display: none;
-//     }
-// }

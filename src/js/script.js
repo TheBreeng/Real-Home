@@ -16,7 +16,6 @@ window.addEventListener('DOMContentLoaded', function () {
 const burger = document.querySelector('.burger-label');
 burger.addEventListener('click', () => {
     let display = document.querySelector('.menu-mobile').style.display;
-    console.log(display);
     if (display == 'none') {
         document.querySelector('.menu-mobile').style.display = 'flex';
         document.body.style.overflow = 'hidden';
