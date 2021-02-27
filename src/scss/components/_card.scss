@@ -3,7 +3,6 @@
 .card {
     @include texGyreHeros(bold, 16px);
     @media (max-width: 1270px) {
-        margin-right: 0;
         &:nth-last-child(-n+3) {
             display: none;
         }
@@ -17,11 +16,18 @@
     border-radius: 5px;
     margin: {
         top: 40px;
-        right: 40px;
+        left: 20px;
+        right: 20px;
+    }
+    @media (max-width: 760px) {
+        margin: 40px 0 0 0;
     }
 
     img {
         margin-bottom: 10px;
+        @media (max-width: 760px) {
+            width: 100%;
+        }
     }
 
     p:last-of-type {
@@ -41,8 +47,14 @@
 
     li:first-child {
         margin-left: 45px;
+        @media (max-width: 760px) {
+            margin-left: 10px;
+        }
     }
     li:last-child {
         margin-right: 45px;
+        @media (max-width: 760px) {
+            margin-right: 10px;
+        }
     }
 }

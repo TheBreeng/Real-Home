@@ -121,6 +121,7 @@ function slider(slide, wrapper, field, indicator, nextArrow, prevArrow) {
         });
     }
     
+    // window.onresize = function(){window.location.reload();};
 }
 
 export default slider;
