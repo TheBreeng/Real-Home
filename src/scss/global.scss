@@ -1,39 +1,76 @@
 @import "./components/_mixins";
 @import "./components/_colors";
-
+@import "./components/_animations";
 
 header, section, ul, li, .logo, .card, .menu-mobile, footer {
     @include flex;
 }
 
+
 header {
     width: 100%;
     z-index: 20;
     animation: 0.7s forwards;
-}
+    position: relative;
+    justify-content: space-between;
+    height: 90px;
+    @media (max-width: 760px) {
+        height: 60px;
+    }
+    background-color: $white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    a {
+        color: $h_color;
+        font-size: 20px;
+    }
 
-@keyframes fadeIn {
-	0% {
-		visibility: hidden;
-    	opacity: 0;
-  	}
-	100% {
-  		visibility: visible;
-    	opacity: 1;
-  	}
-}
-@keyframes comeOn {
-	0% {
-		visibility: visible;
-    	opacity: 1;
-  	}
-	100% {
-  		visibility: hidden;
-    	opacity: 0;
-    	background: transparent;
-  	}
-}
+    .menu li {
+        height: 90px;
+        padding: 0 30px 5px;
+        &:hover {
+            background-color: $nav_color;
+            cursor: pointer;
+        }
+    }
+    .menu-mobile {
+        z-index: 16;
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 90%;
+        height: 70vh;
+        background-color: $p_color;
+        border-radius: 5px;
+        a {
+            color: $white;
+            font-size: 2.3em;
+        }
+        
+    }
 
+    .burger {
+        display: none;
+        z-index: 20;
+    }
+
+    @media (max-width: 1450px) {
+        padding: {
+            left: 40px;
+            right: 40px;
+        };
+    }
+
+    @media (max-width: 1270px) {
+        .menu, .social {
+            display: none;
+        }
+        .burger {
+            display: flex;
+        }
+    }
+}
 
 p, a {
     @include playfairDisplay(400, 16px);
@@ -149,66 +186,6 @@ h3 {
     width: 55px;
     @media (max-width: 760px) {
         display: flex;
-    }
-}
-
-
-header {
-    position: relative;
-    justify-content: space-between;
-    height: 90px;
-    background-color: $white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    a {
-        color: $h_color;
-        font-size: 20px;
-    }
-
-    .menu li {
-        height: 90px;
-        padding: 0 30px 5px;
-        &:hover {
-            background-color: $nav_color;
-            cursor: pointer;
-        }
-    }
-    .menu-mobile {
-        z-index: 16;
-        flex-direction: column;
-        justify-content: space-evenly;
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        width: 90%;
-        height: 70vh;
-        background-color: $p_color;
-        border-radius: 5px;
-        a {
-            color: $white;
-            font-size: 2.3em;
-        }
-        
-    }
-
-    .burger {
-        display: none;
-        z-index: 20;
-    }
-
-    @media (max-width: 1450px) {
-        padding: {
-            left: 40px;
-            right: 40px;
-        };
-    }
-
-    @media (max-width: 1270px) {
-        .menu, .social {
-            display: none;
-        }
-        .burger {
-            display: flex;
-        }
     }
 }
 

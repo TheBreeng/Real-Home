@@ -2,6 +2,8 @@ import slider from './modules/slider';
 import cards from './modules/cards';
 import burger from './modules/burger';
 import fixedWhenScroll from './modules/fixedWhenScroll';
+import showElement from './modules/showElement';
+import scrollToTop from './modules/scrollToTop';
 
 window.addEventListener('DOMContentLoaded', function () {
     slider('.main-slider__slide', '.main-slider__wrapper', '.main-slider__inner', '.main-slider__indicators');
@@ -13,18 +15,11 @@ window.addEventListener('DOMContentLoaded', function () {
 
     cards('.cards__wrapper', 'card');
 
-    fixedWhenScroll('header', '.main-slider', 'fadeIn', 'comeOn');
+    fixedWhenScroll('header', '.main-slider', 'showAnimation', 'hideAnimation');
 
-    burger();
+    showElement('.toTopButton', 'showAnimation', 'hideAnimation');
 
+    scrollToTop('.toTopButton');
 
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset >= document.documentElement.clientHeight) {
-                document.querySelector('.toTopButton').style.display = 'block';
-                document.querySelector('.toTopButton').style.animationName = 'fadeIn';
-        } else {
-            document.querySelector('.toTopButton').style.animationName = 'comeOn';
-            setTimeout(() => document.querySelector('.toTopButton').style.display = '', 700);
-        }
-    });
+    burger('.burger-label', '.menu-mobile');
 });
