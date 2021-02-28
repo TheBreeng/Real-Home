@@ -1,0 +1,43 @@
+.toTopButton {
+    display: none;
+    position: fixed;
+    z-index: 20;
+    bottom: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: $h_color;
+    border: 2px solid $white;
+    border-radius: 50%;
+    opacity: 0.6;
+    transition: 0.3s;
+    animation: 0.7s forwards;
+
+    @media (max-width: 1270px) {
+        bottom: 15px;
+        right: 15px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: -6px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 20px;
+        width: 20px;
+        transform: rotate(-45deg);
+        border: {
+            top: 5px solid $white;
+            right: 5px solid $white;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+        transition: 0.3s;
+        transform: scale(1.2);
+    }
+}

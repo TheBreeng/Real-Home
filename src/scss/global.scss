@@ -6,6 +6,35 @@ header, section, ul, li, .logo, .card, .menu-mobile, footer {
     @include flex;
 }
 
+header {
+    width: 100%;
+    z-index: 20;
+    animation: 0.7s forwards;
+}
+
+@keyframes fadeIn {
+	0% {
+		visibility: hidden;
+    	opacity: 0;
+  	}
+	100% {
+  		visibility: visible;
+    	opacity: 1;
+  	}
+}
+@keyframes comeOn {
+	0% {
+		visibility: visible;
+    	opacity: 1;
+  	}
+	100% {
+  		visibility: hidden;
+    	opacity: 0;
+    	background: transparent;
+  	}
+}
+
+
 p, a {
     @include playfairDisplay(400, 16px);
     text-decoration: none;

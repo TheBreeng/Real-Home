@@ -1,5 +1,7 @@
 import slider from './modules/slider';
 import cards from './modules/cards';
+import burger from './modules/burger';
+import fixedWhenScroll from './modules/fixedWhenScroll';
 
 window.addEventListener('DOMContentLoaded', function () {
     slider('.main-slider__slide', '.main-slider__wrapper', '.main-slider__inner', '.main-slider__indicators');
@@ -10,17 +12,19 @@ window.addEventListener('DOMContentLoaded', function () {
     '.testimonials__next', '.testimonials__prev');
 
     cards('.cards__wrapper', 'card');
-});
+
+    fixedWhenScroll('header', '.main-slider', 'fadeIn', 'comeOn');
+
+    burger();
 
 
-const burger = document.querySelector('.burger-label');
-burger.addEventListener('click', () => {
-    let display = document.querySelector('.menu-mobile').style.display;
-    if (display == 'none') {
-        document.querySelector('.menu-mobile').style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-    } else {
-        document.querySelector('.menu-mobile').style.display = 'none';
-        document.body.style.overflow = '';
-    }
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset >= document.documentElement.clientHeight) {
+                document.querySelector('.toTopButton').style.display = 'block';
+                document.querySelector('.toTopButton').style.animationName = 'fadeIn';
+        } else {
+            document.querySelector('.toTopButton').style.animationName = 'comeOn';
+            setTimeout(() => document.querySelector('.toTopButton').style.display = '', 700);
+        }
+    });
 });
