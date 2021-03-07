@@ -1,0 +1,14 @@
+@import "../components/_colors";
+@import "../components/_mixins";
+
+.breadCrumbs {
+    a, span {
+        @include raleway__font(700, 12px);
+        font-size: 12px;
+        margin-right: 5px;
+    }
+    
+    a:first-child {
+        color: $btn_color;
+    }
+}

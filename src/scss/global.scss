@@ -1,8 +1,10 @@
+@import "./components/_reset";
+@import "./components/_burger";
 @import "./components/_mixins";
 @import "./components/_colors";
 @import "./components/_animations";
 
-header, section, ul, li, .logo, .card, .menu-mobile, footer {
+header, section, ul, li, .logo, .card, .menu a, .menu-mobile, footer {
     @include flex;
 }
 
@@ -19,14 +21,12 @@ header {
     }
     background-color: $white;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    a {
-        color: $h_color;
-        font-size: 20px;
-    }
 
-    .menu li {
+    .menu a {
         height: 90px;
         padding: 0 30px 5px;
+        color: $h_color;
+        font-size: 20px;
         &:hover {
             background-color: $nav_color;
             cursor: pointer;
